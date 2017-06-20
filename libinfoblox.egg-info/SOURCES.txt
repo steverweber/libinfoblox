@@ -1,3 +1,4 @@
+setup.cfg
 setup.py
 libinfoblox/__init__.py
 libinfoblox.egg-info/PKG-INFO

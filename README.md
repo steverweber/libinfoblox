@@ -42,14 +42,32 @@ s.delete_host('hostname.math.example.ca')
 
 
 
-developer
+developer notes
 --------------
 ```
+cat > ~/.pypirc <<EOF
+[distutils]
+index-servers =
+  pypi
+  testpypi
+
+[pypi]
+repository=https://pypi.python.org/pypi
+username=your_username
+password=your_password
+
+[testpypi]
+repository=https://testpypi.python.org/pypi
+username=your_username
+password=your_password
+EOF
+chmod 600 ~/.pypirc
+
 git tag 1.0 -m "Adds a tag so that we can put this on PyPI."
 git push --tags origin master
 # Github creates tarballs for download at https://github.com/{username}/{module_name}/archive/{tag}.tar.gz
-python setup.py register --repository https://testpypi.python.org/pypi
-python setup.py sdist upload --repository https://testpypi.python.org/pypi
-# python setup.py register --repository https://pypi.python.org/pypi
-# python setup.py sdist upload --repository https://pypi.python.org/pypi
+python setup.py register --repository testpypi
+python setup.py sdist upload --repository testpypi
+# python setup.py register --repository pypi
+# python setup.py sdist upload --repository pypi
 ```
