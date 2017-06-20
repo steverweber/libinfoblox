@@ -1,0 +1,4 @@
+test_config_local.py
+.kate-swp
+__pycache__
+dist/
