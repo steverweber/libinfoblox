@@ -39,3 +39,17 @@ s.create_object('record:host', data, **kwargs)
 host = s.get_host('hostname.math.example.ca')
 s.delete_host('hostname.math.example.ca')
 ```
+
+
+
+developer
+--------------
+```
+git tag 1.0 -m "Adds a tag so that we can put this on PyPI."
+git push --tags origin master
+# Github creates tarballs for download at https://github.com/{username}/{module_name}/archive/{tag}.tar.gz
+python setup.py register --repository https://testpypi.python.org/pypi
+python setup.py sdist upload --repository https://testpypi.python.org/pypi
+# python setup.py register --repository https://pypi.python.org/pypi
+# python setup.py sdist upload --repository https://pypi.python.org/pypi
+```
