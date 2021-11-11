@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="libinfoblox",
-    version="1.0",
+    version="2.1",
     description="Access infoblox API",
     author="Steve Weber",
     author_email="steverweber@gmail.com",
