@@ -393,7 +393,7 @@ class Session:
         if not return_fields:
             for objtype in OBJECT_TYPES:
                 if objref == objtype or objref.startswith('{0}/'.format(objtype)):
-                    if OBJECT_TYPES[objtype].has_key('return_fields'):
+                    if 'return_fields' in OBJECT_TYPES[objtype]:
                         if OBJECT_TYPES[objtype]['return_fields']:
                             return_fields = ','.join(OBJECT_TYPES[objtype]['return_fields'])
 
@@ -426,13 +426,13 @@ class Session:
         '''
         host = self.get_host(name, mac, ipv4addr)
 
-        if host.has_key('ipv4addrs'):
+        if 'ipv4addrs' in host:
             extra_info = []
             for r in host['ipv4addrs']:
                 extra_info.append(self.get_object(r['_ref']))
             host['ipv4addrs'] = extra_info
 
-        if host.has_key('ipv6addrs'):
+        if 'ipv6addrs' in host:
             extra_info = []
             for r in host['ipv6addrs']:
                 extra_info.append(self.get_object(r['_ref']))
