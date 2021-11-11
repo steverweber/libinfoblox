@@ -71,3 +71,16 @@ python setup.py sdist upload --repository testpypi
 # python setup.py register --repository pypi
 # python setup.py sdist upload --repository pypi
 ```
+
+new upload method
+------------------
+
+```
+pip install build twine
+python -m build
+
+python -m twine upload --username=steverweber --password=xxxxxxxx \
+    --repository-url=https://upload.pypi.org/legacy/ dist/*
+
+
+```
