@@ -1,11 +1,14 @@
-Metadata-Version: 1.1
+Metadata-Version: 2.1
 Name: libinfoblox
-Version: 1.0
+Version: 2.1
 Summary: Access infoblox API
 Home-page: https://github.com/steverweber/libinfoblox
 Author: Steve Weber
 Author-email: steverweber@gmail.com
 License: UNKNOWN
 Download-URL: https://github.com/steverweber/libinfoblox/archive/1.0.tar.gz
-Description: UNKNOWN
 Platform: UNKNOWN
+License-File: LICENSE
+
+UNKNOWN
+

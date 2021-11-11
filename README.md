@@ -63,7 +63,7 @@ password=your_password
 EOF
 chmod 600 ~/.pypirc
 
-git tag 1.0 -m "Adds a tag so that we can put this on PyPI."
+git tag 2.1 -m "Adds a tag so that we can put this on PyPI."
 git push --tags origin master
 # Github creates tarballs for download at https://github.com/{username}/{module_name}/archive/{tag}.tar.gz
 python setup.py register --repository testpypi
